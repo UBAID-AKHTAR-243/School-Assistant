@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-    <title>Welcom to Assistant Shiblee College</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>SHIBLEE COLLEGE</title>
 </head>
 <body>
-    <h1>Welcome to Assistant Shiblee College</h1>
-
-    <div id="chatbox">
-        <!-- Chat messages will be displayed here -->
+    <div class="heading">
+        <h2>WELCOME TO SHIBLEE COLLEGE</h2>
     </div>
+
+
+
+
+    <div class="input-container">
+    <label for="questions">ASK QUESTIONS</label>
     <input type="text" id="userInput" placeholder="Type your message...">
     <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="center-container">
+          <!-- Content goes here -->
+      </div>
+      
+
 
     <!-- Link the script.js file from the static folder -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>

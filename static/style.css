@@ -1,43 +1,66 @@
 /* Reset some default styles */
-body, h1, p, form {
-    margin: 0;
-    padding: 0;
+body {
+    background:rgb(7, 7, 89);
+  }
+
+  h2 {color:rgb(255, 255, 255);
+     height:0vh;
+     display: flex;
+     justify-content: center;
+  }
+
+
+  h6 {
+    color:rgb(255, 255, 255)
   }
   
-  /* Center the form */
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
+
+.heading {
+  text-align: center;
+}
+
+
+  .input-container {
+     margin-top: 100px;
+     text-align: center;
+    }
+
   
-  /* Style form groups */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
+  .input-container label {
     font-weight: bold;
+    color: #fff;
   }
   
-  .form-group input {
+  .input-container input {
     width: 300px;
+    height: 0px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
-  .form-group button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+  input-container button {
+    width: 300px;
+    height: 0px;
+    padding: 100px 20px;
     border-radius: 5px;
     cursor: pointer;
   }
   
-  .form-group button:hover {
-    background-color: #0056b3;
+  .input-container button:hover {
+    background-color: #568746;
   }
+
+  
+  .center-container {
+    padding-left: 100px;
+    padding-right: 30px;
+    margin-left: 170px;
+    width: 50%;
+    height: 20vh;
+    background-color: rgb(7, 7, 70);
+    margin-top: 25px;
+    
+  }
+  
   

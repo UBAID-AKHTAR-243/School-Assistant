@@ -1,4 +1,3 @@
-# flask_app.py
 from flask import Flask, request, jsonify
 from chatbot import get_response
 

@@ -5,7 +5,8 @@ app = Flask(__name__)
    
 @app.route('/', methods=['get']) 
 def index():
-    return "welcome"
+    print("hello jee")
+    return render_template("index.html")
  
 @app.route('/chat', methods=['POST'])
 def chat():

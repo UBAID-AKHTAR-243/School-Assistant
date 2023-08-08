@@ -54,14 +54,7 @@ def get_response(intents_list, intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
            return random.choice(i['responses'])
-           if i['tag'] != tag:
-               print( "Sorry, I can't answer that. It's not relevant to me.")
-print("Welcome to Assistant Shiblee College! \n Ask your Questions!")
-while True:
-    message=input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
+
     
     
 

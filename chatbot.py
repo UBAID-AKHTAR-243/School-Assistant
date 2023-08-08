@@ -1,15 +1,22 @@
-import os
 import json
+
+from flask import Flask,request, jsonify
 import random
 import pickle
 import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
-#from tensorflow.keras.models import load_model
+
+with open("intents.json", "w") as f:
+    json.dump("intents", f)
+    
+intents = json.loads(open('intents.json').read())
+    
+
 lemmatizer = WordNetLemmatizer()
-#intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 sentences = pickle.load(open('classes.pkl', 'rb'))
+
 
 
 def clean_up_sentence(sentence):
@@ -41,22 +48,13 @@ if r > ERROR_THRESHOLD]
     return return_list
 
 
-
-
-import random
 def get_response(intents_list, intents_json):
-    # Extract the predicted intent from the intents_list
     tag = intents_list[0]['intent']
-    # Retrieve the list of intents from intents_json
     list_of_intents = intents_json['intents']
-    # Search for a matching intent in the list_of_intents
     for i in list_of_intents:
         if i['tag'] == tag:
-            # If a matching intent is found,
-#return a random response from its list
            return random.choice(i['responses'])
            if i['tag'] != tag:
-# If no matching intent is found, return a default responses written.
                print( "Sorry, I can't answer that. It's not relevant to me.")
 print("Welcome to Assistant Shiblee College! \n Ask your Questions!")
 while True:
@@ -64,3 +62,7 @@ while True:
     ints = predict_class(message)
     res = get_response(ints, intents)
     print(res)
+    
+    
+
+

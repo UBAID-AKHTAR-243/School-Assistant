@@ -19,13 +19,13 @@
     </div>
 
     <div class="center-container">
-               {{response}}
+               {{result}}
       </div>
       
 
 
     <!-- Link the script.js file from the static folder -->
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% comment %} <script src="{{ url_for('static', filename='script.js') }}"></script> {% endcomment %}
 
 
 </body>

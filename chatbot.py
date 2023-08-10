@@ -54,6 +54,10 @@ def get_response(intents_list, intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
            return random.choice(i['responses'])
+    message=input("")
+    ints = predict_class(message)
+    res = get_response(ints, intents)
+    print(res)
 
     
     

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+   <link rel="stylesheet" type="text/css" href="C:\Users\UBAID_SARWAR_2\Documents\New folder\style.css">
+   <!--<script src="{{ url_for('static', filename='chatbot.js') }}"></script>-->
    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
    <title>SHIBLEE COLLEGE</title>
 </head>
@@ -11,26 +12,17 @@
     </div>
 
 
-    <div id="chat-container">
-        <div id="chat-display"></div>
-    </div> 
-
-
-
     <div class="input_1">
     <form>
     <label for="questions">ASK</label>
-    <input type="text" id="user_Input" placeholder="Type your message...">
+    <input type="text" id="Input" placeholder="Type your message...">
     <button onclick="sendMessage()">Send</button>
     </form>
     </div>
 
+<p> Response is here:  {{result }}</p>
+        
 
-
-
-    <div class="jinja_1">
-        </h2>Response is here:  {{ result }}</h2>
-      </div>
       
 
 </body>

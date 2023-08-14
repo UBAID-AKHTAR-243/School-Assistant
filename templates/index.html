@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>SHIBLEE COLLEGE</title>
+   <title>SHIBLEE COLLEGE</title>
 </head>
 <body>
     <div class="heading">
@@ -10,25 +11,27 @@
     </div>
 
 
+    <div id="chat-container">
+        <div id="chat-display"></div>
+    </div> 
 
 
-    <div class="input-container">
+
+    <div class="input_1">
     <form>
-    <label for="questions">ASK QUESTIONS</label>
+    <label for="questions">ASK</label>
     <input type="text" id="user_Input" placeholder="Type your message...">
     <button onclick="sendMessage()">Send</button>
     </form>
     </div>
 
-    <div class="center-container">
-              <p> {{result}}</p>
+
+
+
+    <div class="jinja_1">
+        </h2>Response is here:  {{ result }}</h2>
       </div>
       
-
-
-    <!-- Link the script.js file from the static folder -->
-    {% comment %} <script src="{{ url_for('static', filename='script.js') }}"></script> {% endcomment %}
-
 
 </body>
 </html>

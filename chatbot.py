@@ -57,6 +57,7 @@ def get_response(intents_list, intents_json):
     message=input("")
     intents_list = predict_class(message)
     result = get_response(intents_list, intents)
+    print(result)
     return result
 
     

@@ -20,18 +20,18 @@ body {
 }
 
 
-  .input-container {
+  .input_1 {
      margin-top: 100px;
      text-align: center;
     }
 
   
-  .input-container label {
+    .input_1r label {
     font-weight: bold;
     color: #fff;
   }
   
-  .input-container input {
+  .input_1 input {
     width: 300px;
     height: 0px;
     padding: 10px;
@@ -39,7 +39,7 @@ body {
     border-radius: 5px;
   }
   
-  input-container button {
+  .input_1 button {
     width: 300px;
     height: 0px;
     padding: 100px 20px;
@@ -47,17 +47,17 @@ body {
     cursor: pointer;
   }
   
-  .input-container button:hover {
+  .input_1 button:hover {
     background-color: #568746;
   }
 
   
-  .center-container {
+  .jinja_1 {
     padding-left: 100px;
     padding-right: 30px;
     margin-left: 170px;
     width: 50%;
-    height: 20vh;
+    height: 200vh;
     background-color: rgb(7, 7, 70);
     margin-top: 25px;
     

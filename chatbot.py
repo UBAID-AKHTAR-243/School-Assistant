@@ -1,7 +1,6 @@
 
-
-{"intents": [
-    {
+data={
+    "intents": [{
         "tag": "google",
         "patterns": ["google", "search", "internet"],
         "responses": ["Redirecting to Google..."]
@@ -9,27 +8,22 @@
         "tag": "greeting",
         "patterns": ["Aslam O Alaikum","Hi there", "How are you", "Is anyone there?", "Hey", "Hi"],
         "responses": [" وعلیکم السلام !میں اپ کی کیا مدد کر سکتا ہوں؟"],
-        "context": [""]
-    }, {
-        "tag": "goodbye",
-        "patterns": ["Bye", "See you later", "Goodbye", "Get lost", "Till next time", "bbye"],
-        "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-        "context": [""]
+
     }, {
         "tag": "thanks",
         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-        "context": [""]
+
     }, {
         "tag": "noanswer",
         "patterns": [],
         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-        "context": [""]
+
     }, {
         "tag": "options",
         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
         "responses": ["I am a general purpose chatbot. My capabilities are : \n 1. I can chat with you. Try asking me for jokes or riddles! \n 2. Ask me the date and time \n 3. I can google search for you. Use format google: your query \n 4. I can get the present weather for any city. Use format weather: city name \n 5. I can get you the top 10 trending news in India. Use keywords 'Latest News' \n 6. I can get you the top 10 trending songs globally. Type 'songs' \n 7. I can set a timer for you. Enter 'set a timer: minutes to timer' \n 8. I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' \n For suggestions to help me improve, send an email to ted.thedlbot.suggestions@gmail.com . Thank you!! "],
-        "context": [""]
+
 
     }, {
         "tag": "locationn,واقع ,جگہ",
@@ -48,10 +42,10 @@
     "When do the summer holidays begin and for how many days?",
     "Please inform me about the start and end dates of the summer vacations.",
     "What are the dates for the summer break?",
-    "Can you tell me when the summer holidays are scheduled to begin and how long they will last?",
+    "Can you tell me when the summer holidays are scheduled to begin and how long they will last?"
 
 
-"Dhai mahine ki chhutiyan", "چھٹیاں کدو ہون گیاں؟",    "کیا آپ بتا سکدے ہو کہ چھٹیاں کدو ہون گیاں؟",    "میرے سکول کی گرمیوں کدو ہون گیاں؟",    "گرمیوں کی چھٹیاں کدوں شروع ہون گیاں اور کتھے دناں لئی ہون گیاں؟",    "کیا آپ کو یہ معلوم ہے کہ چھٹیاں کدو ہون گیاں اور کتھے دناں تک ہون گیاں؟",    "میرے سکول کی گرمیوں کدو ہون گیاں اور کتھے دناں لئی ہون گیاں؟",    "چھٹیاں کدوں شروع ہون گیاں اور کتھے دناں تک رہیاں گیاں؟",    "کیا آپ بتا سکدے ہو کہ چھٹیاں کدو ہوں گیاں اور کتھے دناں لئی ہون گیاں؟",    "میرے سکول کی گرمیوں کدو ہون گیاں اور کتھے دناں لئی ہون گیاں؟",    "گرمیوں کی چھٹیاں کدوں شروع ہون گیاں اور کتھے دناں تک ہون گیاں",
+"Dhai mahine ki chhutiyan", "چھٹیاں کدو ہون گیاں؟",    "کیا آپ بتا سکدے ہو کہ چھٹیاں کدو ہون گیاں؟",    "میرے سکول کی گرمیوں کدو ہون گیاں؟",    "گرمیوں کی چھٹیاں کدوں شروع ہون گیاں اور کتھے دناں لئی ہون گیاں؟",    "کیا آپ کو یہ معلوم ہے کہ چھٹیاں کدو ہون گیاں اور کتھے دناں تک ہون گیاں؟",    "میرے سکول کی گرمیوں کدو ہون گیاں اور کتھے دناں لئی ہون گیاں؟",    "چھٹیاں کدوں شروع ہون گیاں اور کتھے دناں تک رہیاں گیاں؟",    "کیا آپ بتا سکدے ہو کہ چھٹیاں کدو ہوں گیاں اور کتھے دناں لئی ہون گیاں؟",    "میرے سکول کی گرمیوں کدو ہون گیاں اور کتھے دناں لئی ہون گیاں؟",    "گرمیوں کی چھٹیاں کدوں شروع ہون گیاں اور کتھے دناں تک ہون گیاں"
 
     "چھٹیاں کب ہونگی؟",
     "کیا آپ بتا سکتے ہیں کہ چھٹیاں کب ہوں گی؟",
@@ -65,13 +59,13 @@
     "گرمیوں کی چھٹیاں کب شروع ہونگی اور کتنے دنوں کے لئے ہونگی؟",
     " گرمیاں دیاں چھٹیاں کدوں ہون گیاں ؟", "when summer holidays will starts","summer vacations" ," گرمیاں دیاں چھٹیاں", "  ٹائیاں مہینیاں دیاں چھٹیاں"," garmiyon diyan chhutiyan kiddon hon gian"],
         "responses":[" چھٹیوں کا اغاز یکم جون سے ہوگا"," chhutiyan June 1,2023 se hongi"],
-        "context": ["1-6-2023 to 1-8-2023"]
+
    }, {
-        "tag": " پرنسپل کا نام principal name",
+        "tag": " پرنسپل کا نام",
         "patterns": ["  ہیڈ ماسٹر کا نام"," پرنسپل کا نام"," who is the principal of shiblee School", " principal", " name of principal", " ہیڈ ماسٹر کون یے", " شیبلی سکول کا ہیڈ ماسٹر"],
         "responses": [" MUHAMMAD WAQAR AHMAD Sahib"]
     }, {
-        "tag": " سکول کا ٹائم",
+        "tag": " کھلے گا، سکول کا ٹائم",
         "patterns": [" What is schedule of classes", "time table"," period start","prayer time"," کلاسز کب شروع ہوتی ہیں","  pahla period kab Shuru Hota Hai"," پہلا پیریڈ کب شروع ہوتا ہے"," چھٹی کب ہوتی ہے"],
         "responses": ["prayer time:7:15\n first period 8:00\n end classes 2:00PM"," پریئر ساڑھے سات  شروع ہوتی ہے\nکلاس اٹھ بجے شروع ہوتی ہے \n  چھٹی دو بجے ہوتی ہے"]
     }, {
@@ -130,10 +124,6 @@
         "tag": "contact",
         "patterns": ["your phone number"," your contact number"," School cell number"," شبلی سکول کا فون نمبر","شبلی اسکول کا رابطہ نمبر"],
         "responses":["03467711243 \n ubaid243@gmail.com"]
-    }, {
-        "tag": "کھلا ",
-        "patterns":[" چھٹی", "چھٹی ہے", " کیا اج چھٹی ہے"," کیا آج سکول انا ہے"," کیا آج سکول کھلے گا","ٹوڈے حالی دے","is today a holiday"],
-        "responses": [" آج چھٹی ہے"]
     }, {
         "tag": "میڈیم",
         "patterns": [" kya aapka School English medium hai"," shibli is English medium or Urdu medium" ,"who motivates you"],
@@ -218,7 +208,7 @@
     "Can you let me know if Sarwar sahib is here?",
     "I have a meeting with Sarwar sahib. Is he present?",
     "Is Sarwar sahib currently in the building?",
-    "I want to call to sarwar sahib","I want to talk to sarwar sahib","I want to chat to sarwar sahib",
+    "I want to call to sarwar sahib","I want to talk to sarwar sahib","I want to chat to sarwar sahib"
     "کیا سرور صاحب موجود ہیں۔ میں ان سے بات کرنا چاہتا ہوں۔",
     "سرور صاحب یہاں ہیں؟ مجھے ان سے بات کرنی ہے۔",
     "سرور صاحب دستیاب ہیں؟ میں کچھ گفتگو کرنا چاہتا ہوں۔",
@@ -282,7 +272,7 @@
     "جی موجود ہیں فون کال کیجئے\nPrincipal: وقار صاحب\nph: 03447866158"
   ]
 },{
-  "tag": "school_tour_date,سیر,ٹور",
+  "tag": " سیر، ٹور",
   "patterns": [
     "When will the school tour go to Murree?",
     "What is the date of the school tour to Murree?",
@@ -320,3 +310,146 @@
 
 ]
  }
+
+import json# write the JSON object to file
+with open("intents.json", "w") as f:
+    json.dump(data, f)
+
+intents = json.loads(open('intents.json').read())
+
+import tensorflow as tf
+import nltk
+nltk.download('wordnet')
+nltk.download('punkt')
+import random
+import pickle
+import numpy as np
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.optimizers import SGD
+
+words = [] #All tokenized words of  a pattern (one sentence).
+classes = []#list of names of all tags
+documents = []#list of sentences .Each sentence has tokenized words  .
+ignore_letters = ['?','!','.',',']
+for intent in data["intents"]:
+# mean key named "patterns" of single intent.
+#pattern mean one sentence in the "patterns" key wali line main.
+    for pattern in intent["patterns"]:
+#list of tokenized words in one sentence in "patterns" (single key).
+#because word_tokenize returns list
+        words_list_of_pattern = nltk.word_tokenize(pattern)
+#extend() adds  all but only elements(not list itself) of other list in first list altogether in one turn.
+        words.extend(words_list_of_pattern)
+        documents.append((words_list_of_pattern, intent["tag"]))
+    if intent["tag"] not in classes:
+        classes.append(intent["tag"])
+words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
+#set() removes any duplicate element.
+#sorted() arrange elements in  list in  Alphabatical ascending order.
+words = sorted (set (words))
+classes = sorted (set(classes))
+pickle.dump (words, open('words.pkl', 'wb'))
+pickle.dump (classes, open('classes.pkl', 'wb'))
+
+training_data = []
+#creates a list of number of zeros equal to length of classes(no. of tags)
+output_empty = [0]*len(classes)
+#documents means all documents in all patterns.
+for document in documents:
+    bag = []
+    word_patterns = document[0]
+    word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
+    for word in words:
+        bag.append(1) if word in word_patterns else bag.append(0)
+    output_row = list(output_empty)
+    output_row[classes.index(document[1])] = 1
+    training_data.append([bag, output_row])
+random.shuffle(training_data)
+training_data = np.array(training_data)
+
+
+#first_list of array is first(dimension or column) and we will take it as train_x
+train_x = list(training_data[:, 0])
+#2nd_list of array is 2nd (dimension or column) and we will take it as y_train
+train_y = list(training_data[:, 1])
+
+model = Sequential()
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(len(train_y[0]), activation='softmax'))
+optimizer=tf.keras.optimizers.SGD(learning_rate=0.1)
+model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
+epochs=331
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=epochs, batch_size=5, verbose=1)
+model.save('chatbotmodel.h5', hist)
+print("Done")
+
+
+import random
+import json
+import pickle
+import numpy as np
+import nltk
+from nltk.stem import WordNetLemmatizer
+#from tensorflow.keras.models import load_model
+lemmatizer = WordNetLemmatizer()
+#intents = json.loads(open('intents.json').read())
+words = pickle.load(open('words.pkl', 'rb'))
+sentences = pickle.load(open('classes.pkl', 'rb'))
+
+
+def clean_up_sentence(sentence):
+    sentence_words = nltk.word_tokenize(sentence)
+    sentence_words = [lemmatizer.lemmatize (word) for word in sentence_words]
+    return sentence_words
+
+
+def bag_of_words(sentence):
+    sentence_words = clean_up_sentence(sentence)
+    bag = [0]*len(words)
+    for W in sentence_words:
+        for i, word in enumerate(words):
+            if word == W:
+                bag[i] = 1
+    return np.array(bag)
+
+
+def predict_class(sentence):
+    bow = bag_of_words (sentence)
+    res = model.predict(np.array([bow]))[0]
+    ERROR_THRESHOLD = 0.25
+    results = [[i, r] for i, r in enumerate(res)
+if r > ERROR_THRESHOLD]
+    results.sort(key=lambda x: x[1], reverse=True)
+    return_list = []
+    for r in results:
+        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
+    return return_list
+
+
+import random
+def get_response(intents_list, intents_json):
+    # Extract the predicted intent from the intents_list
+    tag = intents_list[0]['intent']
+    # Retrieve the list of intents from intents_json
+    list_of_intents = intents_json['intents']
+    # Search for a matching intent in the list_of_intents
+    for i in list_of_intents:
+        if i['tag'] == tag:
+            # If a matching intent is found,
+    #return a random response from its list
+           return random.choice(i['responses'])
+           if i['tag'] != tag:
+# If no matching intent is found, return a default responses written.
+               print( "Sorry, I can't answer that. It's not relevant to me.")
+print("Welcome to Shiblee College! \n Ask your Questions!")
+while True:
+    message=input(" ")
+    ints = predict_class(message)
+    res = get_response(ints, intents)
+    print(res)

@@ -1,29 +1,164 @@
+<!-- chatbot.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <link rel="stylesheet" type="text/css" href="C:\Users\UBAID_SARWAR_2\Documents\New folder\style.css">
-   <!--<script src="{{ url_for('static', filename='chatbot.js') }}"></script>-->
-   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-   <title>SHIBLEE COLLEGE</title>
-</head>
-<body>
-    <div class="heading">
-        <h2>WELCOME TO SHIBLEE COLLEGE</h2>
-    </div>
-
-
-    <div class="input_1">
-    <form>
-    <label for="questions">Question</label>
-    <input type="text" id="Input" placeholder="Type your message..." name="myname">
-    <button onclick="sendMessage()">ASK</button>
-    </form>
-    </div>
-
-<p> Response is here:  {{result }}</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rigba
+        }
         
 
-      
 
+        #chat-container {
+            width: 60px;
+            height: 40px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color:lightseagreen;
+            border-radius: 40%;
+            border-width: 45px;
+            border-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        #chat-container.closed {
+            width: 60px;
+            height: 40px;
+            background-color:darkgrey;
+            border-width: 45px;
+        }
+
+        #chat-messages {
+            display: none;
+            width: 300px;
+            height: 400px; /* Adjusted height */
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: darkgrey;
+            border: 1px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        #chat-messages.open {
+            display: block;
+        }
+
+        #header-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ccc; /* Adjusted background color */
+            border-bottom: 5px solid #000;
+            color: darkslategray;
+            font-weight: bolder;
+        }
+
+        #user-input {
+            background-color:slategrey;
+            display: flex;
+            flex-direction:row;
+            margin-top: 300px;
+            border: 1px solid #ccc;
+            content: normal;
+            width: 95%;
+            padding: 10px;
+        }
+
+        #user-input input {
+            flex: 1;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: white;
+            background-color:rgba(197, 159, 159, 0.356);
+            width: 75%;
+        }
+
+        #user-input button {
+            width: 20%;
+            border-width: 1px;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color:initial;
+            color: #fff;
+            margin-right: 8px;
+        }
+       
+        #close-button,
+        #minimize-button {
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    <title>Chatbot-3</title>
+</head>
+<body>
+    <div id="chat-container" onclick="toggleChat()">help</div>
+
+    <div id="chat-messages" class="closed">
+        <div id="header-bar">
+            <span>Shiblee help</span>
+            <div>
+                <span id="close-button" onclick="toggleChat()">✖</span>
+            </div>
+        </div>
+        <div id="chat-response"></div>
+        <div id="user-input">
+            <input type="text" id="user-message" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatContainer = document.getElementById('chat-container');
+            var chatMessages = document.getElementById('chat-messages');
+            chatContainer.classList.toggle('closed');
+            chatMessages.classList.toggle('closed');
+            chatMessages.classList.toggle('open');
+        }
+
+        function minimizeChat() {
+            var chatMessages = document.getElementById('chat-messages');
+            chatMessages.classList.toggle('minimized');
+        }
+
+        function sendMessage() {
+            var userMessage = document.getElementById('user-message').value;
+            var chatResponse = document.getElementById('chat-response');
+            
+            // Send user message to Flask backend
+            fetch('/send_message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: userMessage }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle chatbot response
+                chatResponse.innerHTML += '<p>User: ' + userMessage + '</p>';
+                chatResponse.innerHTML += '<p>Chatbot: ' + data.response + '</p>';
+            });
+        }
+    </script>
 </body>
-</html>

@@ -15,39 +15,41 @@
 
 
         #chat-container {
-            width: 60px;
+            border-top-left-radius: 100%;
+            border-top-right-radius:100%;
+            border-bottom-right-radius: 100%;
+            width: 40px;
             height: 40px;
             position: fixed;
             bottom: 10px;
             right: 10px;
-            background-color:lightseagreen;
-            border-radius: 40%;
-            border-width: 45px;
-            border-color: black;
+            background-color:indigo;
+            padding: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             color: #fff;
-            font-weight: bold;
             transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
+        #chat-response {height: 110px;}
 
         #chat-container.closed {
             width: 60px;
             height: 40px;
-            background-color:darkgrey;
-            border-width: 45px;
+            background-color:rgba(194, 200, 237, 0.958);
+            right: 100px;
         }
 
         #chat-messages {
             display: none;
-            width: 300px;
-            height: 400px; /* Adjusted height */
+            width: 400px;
+            height: 520px; /* Adjusted height */
             position: fixed;
             bottom: 10px;
-            right: 10px;
-            background-color: darkgrey;
+            right: 30px;
+            background-color: #afb1f4; /* Adjusted background color */
+
             border: 1px solid #000;
             border-radius: 10px;
             overflow: hidden;
@@ -63,14 +65,15 @@
             display: flex;
             justify-content: space-between;
             padding: 10px;
-            background-color: #ccc; /* Adjusted background color */
-            border-bottom: 5px solid #000;
+            background-color: #bebfdd;
+            border-bottom: 1px solid #000;
             color: darkslategray;
             font-weight: bolder;
         }
 
         #user-input {
-            background-color:slategrey;
+            background-color: #afb1f4; /* Adjusted background color */
+            
             display: flex;
             flex-direction:row;
             margin-top: 300px;
@@ -86,8 +89,9 @@
             margin-right: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
-            color: white;
-            background-color:rgba(197, 159, 159, 0.356);
+            color: black;
+            background-color: #cecfde; /* Adjusted background color */
+
             width: 75%;
         }
 
@@ -97,8 +101,13 @@
             border-radius: 3px;
             cursor: pointer;
             background-color:initial;
-            color: #fff;
-            margin-right: 8px;
+            color: #161ba4;
+            margin-right: 5px;
+            content: '\274A';
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0px;
+
         }
        
         #close-button,
@@ -108,16 +117,16 @@
             color: #333;
         }
         .heading {text-align: center;
-            margin-top: 70px;}
+                  margin-top: 70px;
+        }
     </style>
-    <title>Chatbot-3</title>
+    <title>Chatbot-4</title>
 </head>
 <body>
     <div class="heading">
         <h3>WELCOME TO SHIBLEE COLLEGE</h3>
     </div>
-
-    <div id="chat-container" onclick="toggleChat()">help</div>
+    <div id="chat-container" onclick="toggleChat()">Help</div>
 
     <div id="chat-messages" class="closed">
         <div id="header-bar">
@@ -126,10 +135,11 @@
                 <span id="close-button" onclick="toggleChat()">✖</span>
             </div>
         </div>
+
         <div id="chat-response"></div>
         <div id="user-input">
-            <input type="text" id="user-message" placeholder="Type your message...">
-            <button onclick="sendMessage()">Send</button>
+            <input type="text" id="user-message" name="ubaid" placeholder="Type your message..." >
+            <button onclick="sendMessage()">&#10148</button>
         </div>
     </div>
 
@@ -168,3 +178,4 @@
         }
     </script>
 </body>
+</html

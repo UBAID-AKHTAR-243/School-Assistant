@@ -10,7 +10,7 @@ app = Flask(__name__)
  
 @app.route('/', methods=['POST'])
 def bot():
-    user_input = request.form.get['user_input']
+    user_input = request.form.get['user_question']
     intents_list = predict_class(user_input)
     response = get_response(intents_list, intents_json)  # Pass intents_json here
     return jsonify({'response': response})

@@ -6,6 +6,11 @@ import chatbot
 
 app = Flask(__name__)
 
+@app.route('/', methods=['POST'])
+def index():
+ return render_template("index.html")
+ 
+
 
  
 @app.route('/', methods=['POST'])

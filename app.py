@@ -15,9 +15,9 @@ def index():
  
 @app.route('/', methods=['POST'])
 def bot():
-    user_input = request.form.get['user_question']
+    user_input = request.form['user_question']
     intents_list = predict_class(user_input)
-    response = get_response(intents_list, intents_json)  # Pass intents_json here
-    return jsonify({'response': response})
+    response = get_response(intents_list, intents_json) 
+return render_template("index.html",response= response)
 if __name__ == '__main__':
   app.run(debug=True)

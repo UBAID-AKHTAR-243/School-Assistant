@@ -8,8 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color:rgba(10, 6, 43, 0.287)
+           background-color: #afb1f4;
         }
         
 
@@ -32,7 +31,7 @@
             color: #fff;
             transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
-        #chat-response {height: 110px;}
+        #chat-response {height: 75px;}
 
         #chat-container.closed {
             width: 60px;
@@ -117,8 +116,14 @@
             color: #333;
         }
         .heading {text-align: center;
-                  margin-top: 70px;
+                  margin-top: 22.5px;
+                  background-color: #afb1f4;
         }
+
+        img {width: 931px;
+            height: 474.2px;
+           }
+
     </style>
     <title>Chatbot-4</title>
 </head>
@@ -126,8 +131,16 @@
     <div class="heading">
         <h3>WELCOME TO SHIBLEE COLLEGE</h3>
     </div>
-    <div id="chat-container" onclick="toggleChat()">Help</div>
 
+    <div>
+        <img src="m7.jpg" alt= "photo of ubaid">
+    </div>
+
+
+<!-- .-->
+<!-- chatbot window starts from here -->
+<div id="chat-container" onclick="toggleChat()">Help</div>
+<!-- part1-chat bot header starts from here.-->
     <div id="chat-messages" class="closed">
         <div id="header-bar">
             <span>Shiblee help</span>
@@ -135,13 +148,22 @@
                 <span id="close-button" onclick="toggleChat()">✖</span>
             </div>
         </div>
+<!-- part2-chat bot answers area starts from here.-->
+<!-- Placeholder paragraph -->
+                <p id="resp-tag">  {{}}  </p>
+               
+               
 
+<!-- part3-chat bot input starts from here.-->
         <div id="chat-response"></div>
-        <div id="user-input">
-            <input type="text" id="user-message" name="user-question" placeholder="Ask me anything..." >
-            <button onclick="sendMessage()">&#10148</button>
-        </div>
-    </div>
+            <div id="user-input">
+                 <input type="text" id="user-message" name="user-question" placeholder="Ask me anything..." >
+                 <button onclick="sendMessage()">&#10148</button>
+            </div>
+      
+
+
+</div>
 
     <script>
         function toggleChat() {
@@ -177,5 +199,8 @@
             });
         }
     </script>
+
+
+
 </body>
 </html

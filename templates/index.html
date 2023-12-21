@@ -181,7 +181,7 @@
 
         function sendMessage() {
             var userMessage = document.getElementById('user-message').value;
-            var chatResponse = document.getElementById('chat-response');
+            var chatResponse = document.getElementById('chat-response');}
             
             // Send user message to Flask backend
             fetch('/send_message', {
@@ -198,9 +198,9 @@
                 chatResponse.innerHTML += '<p>Chatbot: ' + data.response + '</p>';
             });
         }
-    </script>
+</script>
 
 
 
 </body>
-</html
+</html>
